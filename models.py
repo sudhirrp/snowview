@@ -31,7 +31,7 @@ class Post(Base):
 
 
 class Board(Base):
-    __tablename__ = "TENANT_BOARD"
+    __tablename__ = "R2DATAVERSE_WHITE_BOARD"
 
     tenant_id = Column(String, primary_key=True)
     tenant_name = Column(String)
@@ -86,3 +86,4 @@ class Views(Base):
     last_altered = Column(TIMESTAMP(timezone=True))
     comment = Column(String)
     PrimaryKeyConstraint(table_schema, table_name, name="views_pk")
+

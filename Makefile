@@ -1,3 +1,8 @@
+db-migrate:
+	alembic init alembic
+	docker-compose run app alembic revision --autogenerate -m "Latest Migration"
+	docker-compose run app alembic upgrade head
+
 infra-up:
 	docker-compose up -d
 

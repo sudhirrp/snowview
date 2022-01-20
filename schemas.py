@@ -1,5 +1,3 @@
-from itertools import count
-
 from graphene_sqlalchemy import SQLAlchemyObjectType
 from pydantic import BaseModel
 
@@ -76,3 +74,4 @@ class TablesSchema(BaseModel):
 class TablesModel(SQLAlchemyObjectType):
     class Meta:
         model = Tables
+

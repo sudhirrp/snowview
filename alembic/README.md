@@ -100,3 +100,56 @@ docker-compose up
 ## GraphQl playground
 
 > http://127.0.0.1:8000/graphql
+
+## Queries & Mutations
+
+> Mutations
+
+```
+mutation CreateNewPost{
+  createNewPost(title:"SmarTechie Blog", content:"SmarTechie Blog is for learning and sharing the cotting edge technologies") {
+    ok
+  }
+}
+```
+
+> Queries
+
+      query{
+        allPosts{
+          title
+        }
+
+        allTables{
+          tableName
+          clusteringKey
+          tableSchema
+          tableOwner
+          tableType
+          created
+          lastAltered
+        }
+
+        allViews {
+        tableName
+        tableSchema
+        tableOwner
+        created
+        lastAltered
+      }
+    }
+
+    query {
+        postById(postId:7){
+          id
+          title
+          content
+        }
+
+        boardByTenantId(tenantId:"T000001"){
+          tenantId
+          tenantName
+          city
+          zip
+        }
+    }
